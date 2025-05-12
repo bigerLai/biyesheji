@@ -28,8 +28,5 @@ app.register_blueprint(movie_bp)
 def home():
     return "Hello World!"
 
-if __name__ == '__main__':
-    with app.app_context():
-        from models import User, Movie, Rating
-        db.create_all()  # 开发时自动建表
-    app.run(debug=True)
+if __name__ == '__main__': 
+    app.run()  # 删除debug=True参数
